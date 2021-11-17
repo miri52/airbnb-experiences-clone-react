@@ -28,19 +28,24 @@ img {
   height: 30px;
 }
 
+.main-container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
 /* Hero section */
 
 .hero {
   width: 90%;
   margin: 0 auto;
-  padding: 2em 1.5em;
+  padding: 2em 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .hero__img {
-  max-width: 400px;
+  max-width: 350px;
   align-self: center;
 }
 
@@ -54,4 +59,64 @@ img {
 .hero__info {
   max-width: 320px;
   line-height: 110%;
+}
+
+@media (min-width: 700px) {
+  .hero {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 5em;
+    margin-top: 5em;
+  }
+  .hero__img {
+    margin-right: 2em;
+    max-width: 400px;
+  }
+}
+
+/* Card section */
+
+.card-list {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-row-gap: 3em;
+  margin: 0 auto;
+}
+
+.card {
+  font-size: 0.75rem;
+  margin-right: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.card > * {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+
+.card__img {
+  border-radius: 9px;
+}
+
+.card__details {
+  display: flex;
+  align-items: center;
+}
+
+.card__details > * {
+  margin-right: 0.5em;
+}
+
+.card__star {
+  height: 14px;
+}
+
+.card__location,
+.card__review-count {
+  color: #918e9b;
+}
+
+.card__price {
+  margin-top: auto;
 }
