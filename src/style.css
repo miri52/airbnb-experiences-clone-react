@@ -89,10 +89,22 @@ img {
   margin-right: 1em;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .card > * {
   margin: 0;
   margin-bottom: 0.5em;
+}
+.card__badge {
+  text-transform: uppercase;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 0.25em 0.5em;
+  background-color: #fff;
+  font-size: 0.6rem;
+  line-height: 1.4;
+  border-radius: 2px;
 }
 
 .card__img {

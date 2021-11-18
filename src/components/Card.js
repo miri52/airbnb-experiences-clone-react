@@ -2,8 +2,16 @@ import React from "react";
 import star from "../images/star.png";
 
 export default function Card(props) {
+  let badgeText;
+  if (props.card.openSpots === 0) {
+    badgeText = "sold out";
+  } else if (props.card.location === "Online") {
+    badgeText = "online";
+  }
+
   return (
     <div className="card">
+      {badgeText && <div className="card__badge">{badgeText}</div>}
       <img
         className="card__img"
         src={props.card.coverImg}
